@@ -3,4 +3,5 @@ bin
 .testrepository
 .tox
 tags
-.gitignore
+.bzrignore
+*.sw[nop]
