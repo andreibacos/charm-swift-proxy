@@ -111,6 +111,10 @@ options:
     default: tempauth
     type: string
     description: Auth method to use, tempauth or keystone
+  tempauth-users:
+    default: "user_system_root = testpass .admin, user_system_admin = testpass .reseller_admin"
+    type: string
+    description: comma separated list of tempauth users to add
   delay-auth-decision:
     default: true
     type: boolean
