@@ -144,6 +144,7 @@ class SwiftIdentityContext(OSContextGenerator):
             ctxt.update(ks_auth)
         elif (auth_type == 'tempauth'):
             tempauth_users = config('tempauth-users').split(',')
+            ctxt.update({"tempauth_users": [item.strip() for item in tempauth_users]})
 
         for relid in relation_ids('identity-service'):
             log('Using Keystone configuration from identity-service.')
